@@ -302,3 +302,37 @@ Authentication verifies who you are, while authorization determines what you are
 
 It means providing only the minimum permissions required to perform a task.
 
+
+
+
+
+
+
+
+
+\## Screenshots
+
+
+
+\### 1. Create IAM Group
+
+!\[Create IAM Group](screenshots/01-iam-create-group.png)
+
+
+
+\### 2. IAM User Review
+
+!\[IAM User Review](screenshots/01-iam-user-review.png)
+
+
+
+\### 3. IAM User
+
+!\[IAM User](screenshots/iam-user.png)
+
+
+
+\### 4. IAM Dashboard
+
+!\[IAM Dashboard](screenshots/iam\_dashboard.png)
+
