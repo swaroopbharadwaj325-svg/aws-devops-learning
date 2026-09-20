@@ -44,14 +44,42 @@ Region: `ap-south-1`
 ## Current Progress
 
 - [x] Created S3 bucket
-- [ ] Create frontend
-- [ ] Create DynamoDB table
-- [ ] Create Lambda function
-- [ ] Create API Gateway
-- [ ] Configure Cognito
-- [ ] Integrate services
-- [ ] Test application
-- [ ] Document final architecture
+- [x] Created frontend
+- [x] Created DynamoDB table
+- [x] Created Lambda function
+- [x] Created API Gateway
+- [x] Configured Cognito
+- [x] Configured JWT authorization
+- [x] Integrated services
+- [x] Tested authentication
+- [x] Tested file upload
+- [x] Verified S3 object
+- [x] Verified DynamoDB metadata
+- [x] Documented final architecture
+
+
+
+## Application Flow
+
+1. User opens the frontend application.
+2. User logs in using Amazon Cognito.
+3. Cognito authenticates the user.
+4. The frontend sends the authentication token to API Gateway.
+5. API Gateway validates the JWT token.
+6. API Gateway invokes AWS Lambda.
+7. Lambda generates a pre-signed S3 upload URL.
+8. Lambda stores file metadata in DynamoDB.
+9. The frontend uploads the file directly to Amazon S3.
+10. The uploaded file and metadata are verified.
+
+## Security
+
+- Amazon Cognito is used for authentication.
+- API Gateway uses a JWT authorizer.
+- The `/files` API requires authentication.
+- The S3 bucket remains private.
+- Files are uploaded using temporary pre-signed URLs.
+- Lambda uses IAM permissions for the required AWS resources.
 
 ## S3 Bucket
 
